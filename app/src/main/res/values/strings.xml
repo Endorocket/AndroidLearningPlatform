@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">AndroidLearningPlatform</string>
+    <string name="film_music">Muzyka Filmowa</string>
+    <string name="famous_actors">Znani Aktorzy</string>
+    <string name="famous_films">Znane Filmy</string>
+    <string name="music_task">Muzyka</string>
+    <string name="picture_task">Obrazek</string>
+    <string name="film_task">Klip</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</string>
+    <string name="test">Test</string>
+    <string name="next">Następne</string>
+    <string name="end">Koniec</string>
+    <string name="picture_task_title">Zadanie z obrazkiem</string>
+    <string name="music_task_title">Zadanie muzyczne</string>
+    <string name="film_task_title">Zadanie z klipem wideo</string>
 </resources>
