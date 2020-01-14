@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#C8C8C8"
     android:orientation="horizontal">
 
     <TextView
@@ -16,19 +18,77 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView"
-        style="?android:textAppearanceMedium"
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/btnPlayFilm"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="220dp"
-        android:lineSpacingMultiplier="1.2"
-        android:padding="16dp"
-        android:text="@string/lorem_ipsum"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="8dp"
+        android:text="Włącz"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/videoView" />
+
+    <Button
+        android:id="@+id/btnStopFilm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="80dp"
+        android:text="Stop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/videoView" />
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="300dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Co to za film?"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPlayFilm" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupFilm"
+        android:layout_width="212dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <RadioButton
+            android:id="@+id/radioBtnLord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Władca Pierścieni" />
+
+        <RadioButton
+            android:id="@+id/radioBtnHobbit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hobbit" />
+
+        <RadioButton
+            android:id="@+id/radioBtnIrish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Irlandczyk" />
+    </RadioGroup>
 
     <Button
         android:id="@+id/film_task_next"

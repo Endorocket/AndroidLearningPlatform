@@ -9,7 +9,7 @@
     <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</string>
     <string name="test">Test</string>
     <string name="next">Następne</string>
-    <string name="end">Koniec</string>
+    <string name="end">Koniec testu</string>
     <string name="picture_task_title">Zadanie z obrazkiem</string>
     <string name="music_task_title">Zadanie muzyczne</string>
     <string name="film_task_title">Zadanie z klipem wideo</string>
