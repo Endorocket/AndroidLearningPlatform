@@ -38,12 +38,9 @@ public class FilmResultActivity extends Activity {
         break;
     }
 
-    btnNext.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View v) {
-        Intent intent = new Intent(FilmResultActivity.this, MainActivity.class);
-        FilmResultActivity.this.startActivity(intent);
-      }
+    btnNext.setOnClickListener(v -> {
+      Intent intent1 = new Intent(FilmResultActivity.this, MainActivity.class);
+      FilmResultActivity.this.startActivity(intent1);
     });
   }
 }

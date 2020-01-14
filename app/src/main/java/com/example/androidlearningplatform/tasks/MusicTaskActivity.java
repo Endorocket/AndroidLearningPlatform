@@ -24,38 +24,29 @@ public class MusicTaskActivity extends Activity {
 
     final MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.interstellar_music);
 
-    btnPlayMusic.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View v) {
-        if (!mediaPlayer.isPlaying())
-          mediaPlayer.start();
-      }
+    btnPlayMusic.setOnClickListener(v -> {
+      if (!mediaPlayer.isPlaying())
+        mediaPlayer.start();
     });
 
-    btnStopMusic.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View v) {
+    btnStopMusic.setOnClickListener(v -> {
+      if (mediaPlayer.isPlaying())
+        mediaPlayer.pause();
+    });
+
+    nextButton.setOnClickListener(v -> {
+
+      if (radioGroup.getCheckedRadioButtonId() == -1) {
+        Toast.makeText(MusicTaskActivity.this, "Wybierz odpowiedź", Toast.LENGTH_SHORT).show();
+      } else {
         if (mediaPlayer.isPlaying())
           mediaPlayer.pause();
-      }
-    });
 
-    nextButton.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View v) {
-
-        if (radioGroup.getCheckedRadioButtonId() == -1) {
-          Toast.makeText(MusicTaskActivity.this, "Wybierz odpowiedź", Toast.LENGTH_SHORT).show();
-        } else {
-          if (mediaPlayer.isPlaying())
-            mediaPlayer.pause();
-
-          Intent intent = new Intent(MusicTaskActivity.this, PictureTaskActivity.class);
-          Bundle bundle = new Bundle();
-          bundle.putInt("musicAnswer", radioGroup.getCheckedRadioButtonId());
-          intent.putExtras(bundle);
-          MusicTaskActivity.this.startActivity(intent);
-        }
+        Intent intent = new Intent(MusicTaskActivity.this, PictureTaskActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putInt("musicAnswer", radioGroup.getCheckedRadioButtonId());
+        intent.putExtras(bundle);
+        MusicTaskActivity.this.startActivity(intent);
       }
     });
   }

@@ -30,70 +30,52 @@ public class FilmMusicFragment extends Fragment {
     final MediaPlayer mpGladiator = MediaPlayer.create(getContext(), R.raw.gladiator_sound);
     final MediaPlayer mpInterstellar = MediaPlayer.create(getContext(), R.raw.interstellar_music);
 
-    btnPlayDarkKnightSound.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View v) {
-        if (mpGladiator.isPlaying())
-          mpGladiator.pause();
+    btnPlayDarkKnightSound.setOnClickListener(v -> {
+      if (mpGladiator.isPlaying())
+        mpGladiator.pause();
 
-        if (mpInterstellar.isPlaying())
-          mpInterstellar.pause();
+      if (mpInterstellar.isPlaying())
+        mpInterstellar.pause();
 
-        if (!mpDarkKnight.isPlaying())
-          mpDarkKnight.start();
-      }
+      if (!mpDarkKnight.isPlaying())
+        mpDarkKnight.start();
     });
 
-    btnStopDarkKnightSound.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View v) {
-        if (mpDarkKnight.isPlaying())
-          mpDarkKnight.pause();
-      }
+    btnStopDarkKnightSound.setOnClickListener(v -> {
+      if (mpDarkKnight.isPlaying())
+        mpDarkKnight.pause();
     });
 
-    btnPlayGladiatorSound.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View v) {
-        if (mpDarkKnight.isPlaying())
-          mpDarkKnight.pause();
+    btnPlayGladiatorSound.setOnClickListener(v -> {
+      if (mpDarkKnight.isPlaying())
+        mpDarkKnight.pause();
 
-        if (mpInterstellar.isPlaying())
-          mpInterstellar.pause();
+      if (mpInterstellar.isPlaying())
+        mpInterstellar.pause();
 
-        if (!mpGladiator.isPlaying())
-          mpGladiator.start();
-      }
+      if (!mpGladiator.isPlaying())
+        mpGladiator.start();
     });
 
-    btnStopGladiatorSound.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View v) {
-        if (mpGladiator.isPlaying())
-          mpGladiator.pause();
-      }
+    btnStopGladiatorSound.setOnClickListener(v -> {
+      if (mpGladiator.isPlaying())
+        mpGladiator.pause();
     });
 
-    btnPlayInterstellarSound.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View v) {
-        if (mpDarkKnight.isPlaying())
-          mpDarkKnight.pause();
+    btnPlayInterstellarSound.setOnClickListener(v -> {
+      if (mpDarkKnight.isPlaying())
+        mpDarkKnight.pause();
 
-        if (mpGladiator.isPlaying())
-          mpGladiator.pause();
+      if (mpGladiator.isPlaying())
+        mpGladiator.pause();
 
-        if (!mpInterstellar.isPlaying())
-          mpInterstellar.start();
-      }
+      if (!mpInterstellar.isPlaying())
+        mpInterstellar.start();
     });
 
-    btnStopInterstellarSound.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View v) {
-        if (mpInterstellar.isPlaying())
-          mpInterstellar.pause();
-      }
+    btnStopInterstellarSound.setOnClickListener(v -> {
+      if (mpInterstellar.isPlaying())
+        mpInterstellar.pause();
     });
 
     return rootView;

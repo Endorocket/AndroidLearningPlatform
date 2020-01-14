@@ -22,18 +22,15 @@ public class PictureTaskActivity extends Activity {
     final View nextButton = findViewById(R.id.picture_task_next);
     final RadioGroup radioGroup = findViewById(R.id.radioGroupPicture);
 
-    nextButton.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View v) {
+    nextButton.setOnClickListener(v -> {
 
-        if (radioGroup.getCheckedRadioButtonId() == -1) {
-          Toast.makeText(PictureTaskActivity.this, "Wybierz odpowiedź", Toast.LENGTH_SHORT).show();
-        } else {
-          Intent intent = new Intent(PictureTaskActivity.this, FilmTaskActivity.class);
-          bundle.putInt("pictureAnswer", radioGroup.getCheckedRadioButtonId());
-          intent.putExtras(bundle);
-          PictureTaskActivity.this.startActivity(intent);
-        }
+      if (radioGroup.getCheckedRadioButtonId() == -1) {
+        Toast.makeText(PictureTaskActivity.this, "Wybierz odpowiedź", Toast.LENGTH_SHORT).show();
+      } else {
+        Intent intent1 = new Intent(PictureTaskActivity.this, FilmTaskActivity.class);
+        bundle.putInt("pictureAnswer", radioGroup.getCheckedRadioButtonId());
+        intent1.putExtras(bundle);
+        PictureTaskActivity.this.startActivity(intent1);
       }
     });
 

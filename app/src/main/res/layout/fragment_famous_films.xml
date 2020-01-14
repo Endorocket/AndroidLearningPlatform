@@ -1,23 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/textView"
-        style="?android:textAppearanceMedium"
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/btnPlayIrishTrailer"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:lineSpacingMultiplier="1.2"
-        android:padding="16dp"
-        android:text="@string/lorem_ipsum"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Włącz"
+        app:layout_constraintEnd_toEndOf="@+id/btnStopLordTrailer"
+        app:layout_constraintStart_toStartOf="@+id/btnStopLordTrailer"
+        app:layout_constraintTop_toTopOf="@+id/videoIrishTrailer" />
+
+    <Button
+        android:id="@+id/btnStopLordTrailer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Stop"
+        app:layout_constraintEnd_toEndOf="@+id/btnPlayLordTrailer"
+        app:layout_constraintStart_toStartOf="@+id/btnPlayLordTrailer"
+        app:layout_constraintTop_toBottomOf="@+id/btnPlayLordTrailer" />
 
     <Button
         android:id="@+id/test_button"
@@ -28,5 +34,103 @@
         android:text="@string/test"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <VideoView
+        android:id="@+id/videoHobbitTrailer"
+        android:layout_width="202dp"
+        android:layout_height="115dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <VideoView
+        android:id="@+id/videoLordTrailer"
+        android:layout_width="202dp"
+        android:layout_height="115dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/videoHobbitTrailer" />
+
+    <VideoView
+        android:id="@+id/videoIrishTrailer"
+        android:layout_width="202dp"
+        android:layout_height="115dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/videoLordTrailer" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Hobbit"
+        android:textColor="#000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/videoHobbitTrailer"
+        app:layout_constraintTop_toBottomOf="@+id/videoHobbitTrailer" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Irlandczyk"
+        android:textColor="#000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/videoIrishTrailer"
+        app:layout_constraintTop_toBottomOf="@+id/videoIrishTrailer" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="156dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="8dp"
+        android:text="Władca Pierścieni"
+        android:textColor="#000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/videoLordTrailer" />
+
+    <Button
+        android:id="@+id/btnPlayHobbitTrailer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="Włącz"
+        app:layout_constraintStart_toEndOf="@+id/videoHobbitTrailer"
+        app:layout_constraintTop_toTopOf="@+id/videoHobbitTrailer" />
+
+    <Button
+        android:id="@+id/btnStopHobbitTrailer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Stop"
+        app:layout_constraintEnd_toEndOf="@+id/btnPlayHobbitTrailer"
+        app:layout_constraintStart_toStartOf="@+id/btnPlayHobbitTrailer"
+        app:layout_constraintTop_toBottomOf="@+id/btnPlayHobbitTrailer" />
+
+    <Button
+        android:id="@+id/btnPlayLordTrailer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Włącz"
+        app:layout_constraintEnd_toEndOf="@+id/btnStopHobbitTrailer"
+        app:layout_constraintStart_toStartOf="@+id/btnStopHobbitTrailer"
+        app:layout_constraintTop_toTopOf="@+id/videoLordTrailer" />
+
+    <Button
+        android:id="@+id/btnStopIrishTrailer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Stop"
+        app:layout_constraintEnd_toEndOf="@+id/btnPlayIrishTrailer"
+        app:layout_constraintStart_toStartOf="@+id/btnPlayIrishTrailer"
+        app:layout_constraintTop_toBottomOf="@+id/btnPlayIrishTrailer" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

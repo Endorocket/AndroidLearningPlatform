@@ -35,31 +35,18 @@ public class FilmTaskActivity extends Activity {
     Uri uri = Uri.parse(path);
     video.setVideoURI(uri);
 
-    btnPlay.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View v) {
-        video.start();
-      }
-    });
+    btnPlay.setOnClickListener(v -> video.start());
 
-    btnStop.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View v) {
-        video.pause();
-      }
-    });
+    btnStop.setOnClickListener(v -> video.pause());
 
-    btnNext.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View v) {
-        if (radioGroup.getCheckedRadioButtonId() == -1) {
-          Toast.makeText(FilmTaskActivity.this, "Wybierz odpowiedź", Toast.LENGTH_SHORT).show();
-        } else {
-          Intent intent = new Intent(FilmTaskActivity.this, MusicResultActivity.class);
-          bundle.putInt("filmAnswer", radioGroup.getCheckedRadioButtonId());
-          intent.putExtras(bundle);
-          FilmTaskActivity.this.startActivity(intent);
-        }
+    btnNext.setOnClickListener(v -> {
+      if (radioGroup.getCheckedRadioButtonId() == -1) {
+        Toast.makeText(FilmTaskActivity.this, "Wybierz odpowiedź", Toast.LENGTH_SHORT).show();
+      } else {
+        Intent intent1 = new Intent(FilmTaskActivity.this, MusicResultActivity.class);
+        bundle.putInt("filmAnswer", radioGroup.getCheckedRadioButtonId());
+        intent1.putExtras(bundle);
+        FilmTaskActivity.this.startActivity(intent1);
       }
     });
   }

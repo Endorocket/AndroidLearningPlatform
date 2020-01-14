@@ -37,13 +37,10 @@ public class PictureResultActivity extends Activity {
         break;
     }
 
-    btnNext.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View v) {
-        Intent intent = new Intent(PictureResultActivity.this, FilmResultActivity.class);
-        intent.putExtras(bundle);
-        PictureResultActivity.this.startActivity(intent);
-      }
+    btnNext.setOnClickListener(v -> {
+      Intent intent1 = new Intent(PictureResultActivity.this, FilmResultActivity.class);
+      intent1.putExtras(bundle);
+      PictureResultActivity.this.startActivity(intent1);
     });
   }
 }

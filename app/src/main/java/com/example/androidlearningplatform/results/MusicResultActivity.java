@@ -37,13 +37,10 @@ public class MusicResultActivity extends Activity {
         break;
     }
 
-    btnNext.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View v) {
-        Intent intent = new Intent(MusicResultActivity.this, PictureResultActivity.class);
-        intent.putExtras(bundle);
-        MusicResultActivity.this.startActivity(intent);
-      }
+    btnNext.setOnClickListener(v -> {
+      Intent intent1 = new Intent(MusicResultActivity.this, PictureResultActivity.class);
+      intent1.putExtras(bundle);
+      MusicResultActivity.this.startActivity(intent1);
     });
   }
 }
