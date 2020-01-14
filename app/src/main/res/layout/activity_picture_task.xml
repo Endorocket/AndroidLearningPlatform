@@ -67,7 +67,7 @@
             android:id="@+id/radioBtnLeonardo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Leonardo Di Caprio" />
+            android:text="Leonardo DiCaprio" />
 
         <RadioButton
             android:id="@+id/radioBtnChristian"
