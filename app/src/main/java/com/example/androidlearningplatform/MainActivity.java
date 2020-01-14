@@ -1,5 +1,6 @@
 package com.example.androidlearningplatform;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -37,7 +38,10 @@ public class MainActivity extends FragmentActivity {
   @Override
   public void onBackPressed() {
     if (viewPager.getCurrentItem() == 0) {
-      super.onBackPressed();
+      Intent intent = new Intent(Intent.ACTION_MAIN);
+      intent.addCategory(Intent.CATEGORY_HOME);
+      intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+      startActivity(intent);
     } else {
       viewPager.setCurrentItem(viewPager.getCurrentItem() - 1);
     }
