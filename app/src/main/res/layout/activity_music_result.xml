@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#C8C8C8"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textViewGravity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
+        android:text="Grawitacja"
+        android:textColor="#000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewMartian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Marsjanin"
+        android:textColor="#000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewGravity" />
+
+    <TextView
+        android:id="@+id/textViewInterstellar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Interstellar"
+        android:textColor="#000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewMartian" />
+
+    <Button
+        android:id="@+id/btnMusicResultNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewInterstellar"
+        app:layout_constraintStart_toEndOf="@+id/textViewInterstellar"
+        app:layout_constraintTop_toTopOf="@+id/textViewInterstellar"
+        android:src="@android:drawable/ic_input_add" />
+
+
+    <ImageView
+        android:id="@+id/userChoiceGravity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewGravity"
+        app:layout_constraintEnd_toStartOf="@+id/textViewInterstellar"
+        app:layout_constraintTop_toTopOf="@+id/textViewGravity"
+        android:src="@android:drawable/ic_delete" />
+
+    <ImageView
+        android:id="@+id/userChoiceMartian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewMartian"
+        app:layout_constraintEnd_toStartOf="@+id/textViewInterstellar"
+        app:layout_constraintTop_toTopOf="@+id/textViewMartian"
+        android:src="@android:drawable/ic_delete" />
+
+    <ImageView
+        android:id="@+id/userChoiceInterstellar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewInterstellar"
+        app:layout_constraintEnd_toStartOf="@+id/textViewInterstellar"
+        app:layout_constraintTop_toTopOf="@+id/textViewInterstellar"
+        android:src="@android:drawable/ic_delete" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="45dp"
+        android:text="zaznaczył"
+        app:layout_constraintBottom_toTopOf="@+id/userChoiceGravity"
+        app:layout_constraintEnd_toEndOf="@+id/userChoiceGravity"
+        app:layout_constraintStart_toStartOf="@+id/userChoiceGravity" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Użytkownik"
+        app:layout_constraintBottom_toTopOf="@+id/textView6"
+        app:layout_constraintEnd_toEndOf="@+id/userChoiceGravity"
+        app:layout_constraintStart_toStartOf="@+id/userChoiceGravity" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="45dp"
+        android:text="Prawidłowa"
+        app:layout_constraintBottom_toTopOf="@+id/userChoiceGravity"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prawidłowa"
+        app:layout_constraintBottom_toTopOf="@+id/textView7"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/imageView" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

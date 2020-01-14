@@ -68,11 +68,11 @@ public class MainActivity extends FragmentActivity {
     public CharSequence getPageTitle(int position) {
       switch (position) {
         case 0:
-          return getString(R.string.film_music);
+          return "Muzyka\nfilmowa";
         case 1:
-          return getString(R.string.famous_actors);
+          return "Znani\naktorzy";
         case 2:
-          return getString(R.string.famous_films);
+          return "Znane\nfilmy";
         default:
           return null;
       }

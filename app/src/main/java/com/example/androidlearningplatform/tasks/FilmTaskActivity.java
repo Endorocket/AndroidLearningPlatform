@@ -10,8 +10,8 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 import android.widget.VideoView;
 
-import com.example.androidlearningplatform.MainActivity;
 import com.example.androidlearningplatform.R;
+import com.example.androidlearningplatform.results.MusicResultActivity;
 
 public class FilmTaskActivity extends Activity {
 
@@ -55,7 +55,7 @@ public class FilmTaskActivity extends Activity {
         if (radioGroup.getCheckedRadioButtonId() == -1) {
           Toast.makeText(FilmTaskActivity.this, "Wybierz odpowiedź", Toast.LENGTH_SHORT).show();
         } else {
-          Intent intent = new Intent(FilmTaskActivity.this, MainActivity.class);
+          Intent intent = new Intent(FilmTaskActivity.this, MusicResultActivity.class);
           bundle.putInt("filmAnswer", radioGroup.getCheckedRadioButtonId());
           intent.putExtras(bundle);
           FilmTaskActivity.this.startActivity(intent);

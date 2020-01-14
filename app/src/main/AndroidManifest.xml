@@ -19,6 +19,9 @@
         <activity android:name=".tasks.MusicTaskActivity" />
         <activity android:name=".tasks.PictureTaskActivity" />
         <activity android:name=".tasks.FilmTaskActivity" />
+        <activity android:name=".results.PictureResultActivity" />
+        <activity android:name=".results.MusicResultActivity" />
+        <activity android:name=".results.FilmResultActivity" />
     </application>
 
 </manifest>
